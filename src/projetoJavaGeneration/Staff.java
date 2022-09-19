@@ -12,9 +12,8 @@ public class Staff extends Escola {
         this.turno = turno;        
     }
 
-    public String getArea() {
-
-        int a = (int)(Math.random()*5.0);        
+    public void sorteioDia() {
+    	int a = (int)(Math.random()*5.0);        
         System.out.println("\nO número escolhido foi: "+a+ " logo, o local a ser limpado é: ");
                 
         switch(a) {
@@ -35,6 +34,9 @@ public class Staff extends Escola {
             default:
                 System.out.println("\nSala de Diretoria/Professores");
         }
+    }
+    
+    public String getArea() {
         return area;        
     }
 

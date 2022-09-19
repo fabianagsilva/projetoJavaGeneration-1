@@ -87,11 +87,9 @@ public class Alunos extends Escola {
 
 	public void faltasAluno(){
 	if(totalFaltas >=0 && totalFaltas <=32){
-		System.out.println("\nAluna(o) APROVADA(O)!");
-	}else if(totalFaltas >=33 && totalFaltas <=50){
-		System.out.println("\nAluna(o) de EXAME!\nEntre em contato com o seu professor!");
+		System.out.println("\nAluna(o) com faltas dentro do limite anual!");
 	}else {
-		System.out.println("\nAluna(o) REPROVADA(O)!");
+		System.out.println("\nAluna(o) REPROVADA(O) por faltas!");
 		}
 	}
 
