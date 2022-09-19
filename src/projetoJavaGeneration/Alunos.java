@@ -76,6 +76,26 @@ public class Alunos extends Escola {
 
 	}
 
+	public void aprovaAluno(){
+	if(mediaFinal >=7 && mediaFinal <=10){
+		System.out.println("\nAluna(o) APROVADA(O)!");
+	}else if(mediaFinal >=5 && mediaFinal <7){
+		System.out.println("\nAluna(o) de EXAME!\nEntre em contato com o seu professor!");
+	}else {
+		System.out.println("\nAluna(o) REPROVADA(O)!");
+		}
+	}
+
+	public void faltasAluno(){
+	if(totalFaltas >=0 && totalFaltas <=32){
+		System.out.println("\nAluna(o) APROVADA(O)!");
+	}else if(totalFaltas >=33 && totalFaltas <=50){
+		System.out.println("\nAluna(o) de EXAME!\nEntre em contato com o seu professor!");
+	}else {
+		System.out.println("\nAluna(o) REPROVADA(O)!");
+		}
+	}
+
 	public void imprimirAluno() {
 		System.out.println("\n****************Aluno****************");
 		System.out.println("\nNome: " + getNome() + "\nGênero: " + getGenero() + "\nEndereço: " + getEndereco()

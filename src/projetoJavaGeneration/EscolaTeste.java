@@ -13,6 +13,7 @@ public class EscolaTeste {
 		
 		aluno1.leiaMedia();	
 		aluno1.imprimirAluno();
+		aluno1.aprovaAluno();
 			
 		
 		
