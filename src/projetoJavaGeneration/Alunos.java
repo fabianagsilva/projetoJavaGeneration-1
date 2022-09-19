@@ -70,8 +70,7 @@ public class Alunos extends Escola {
 		System.out.println("Quantas faltas " + getNome() + " teve no 3º Bimestre? ");
 		f3 = leia.nextInt();
 		System.out.println("Quantas faltas " + getNome() + " teve no 4º Bimestre? ");
-		f4 = leia.nextInt();
-		totalFaltas = f1 + f2 + f3 + f4;
+		f4 = leia.nextInt();		totalFaltas = f1 + f2 + f3 + f4;
 		System.out.println("\n===== Total de faltas: " + totalFaltas + " =====");
 
 	}
