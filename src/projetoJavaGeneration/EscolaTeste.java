@@ -9,70 +9,92 @@ public class EscolaTeste {
 		Alunos aluno1 = new Alunos ("Maria Joana", "Feminino", "Rua das Lágrimas, 1", "12345678910", 14, 44443333, 12345, 9,
 				"B");		
 		
-		
 		Professores prof1 = new Professores ("João Paulo", "masculino", "Avenida Souza e Silva, 2", "01987654321", 42, 33334444, 57089,
-					"História", "Noturno");
-		Professores prof2 = new Professores ("Eduarda Reis", "feminino", "Rua da Paróquia, 36","6574239751", 37, 975489571,21487010, 
-					"Geografia","Matutino");
+					"História", "Noturno");		
 		
 		Staff limpeza = new Staff ("Maria Lúcia", "Não-declarado", "Desconhecido", "23654789104", 56, 55556666, "Limpeza", 
 		"Matutino e Noturno");
-		Staff diretoria = new Staff("Patricia Bonfim", "Feminino","Avenida Rudge, 52", "6954165249", 52, 333658741, "Diretoria","Tempo Integral");
-	
-		//Chamando os métodos para invocar os comportamentos
-		int op,acesso;
 		
-		Scanner ler = new Scanner(System.in);
+		//Chamando os métodos para invocar os comportamentos
+		int op,acesso,teacher;
+		
+		Scanner leia = new Scanner(System.in);
 		
 		System.out.println("\n1- Acessar sistema do Aluno");
 		System.out.println("\n2- Acessar o Sistema do Professor");
 		System.out.println("\n3- Acessar o Sistema do Staff");
+		System.out.println("\n0- Sair do sistema!");
 		
 		do {
 		
 		System.out.println("\nQual sistema gostaria de acessar? ");	
-		op = ler.nextInt();	
+		op = leia.nextInt();	
 							
 		switch(op) {
 		
 		case 1:		
 			
-			System.out.println("\n******Bem vinde ao Sistema do Aluno*******");
+			System.out.println("\n***Bem vinde ao Sistema do Aluno**");
 			//Novo menu de Opções dentro do Sistema Aluno
 			
 			System.out.println("\n1- Calcular a Média do Aluno");
-			System.out.println("\n2- Contar a quantidade de faltas");			
+			System.out.println("\n2- Contar a quantidade de faltas");		
+			System.out.println("\n3- Imprimir informações do Aluno");			
 			
 			System.out.println("\nDigite a opção que deseja acessar: ");		
-			acesso= ler.nextInt();					
+			acesso= leia.nextInt();					
 			
 			switch(acesso) {
 			case 1:
 				aluno1.leiaMedia();
+				aluno1.aprovaAluno();
 				break;
 			case 2:
 				aluno1.leiaFaltas();
-				break;
+				aluno1.faltasAluno();
+				break;			
 			case 3:
-				aluno1.aprovaAluno();
-				break;
+				aluno1.imprimirAluno();				
+				break;			
 				default:
-					System.out.println("\nOpção Inválida, digite as do menu");					
-				}break;			
+					System.out.println("\nOpção Inválida, tente novamente!");					
+				}break;				
 			
 			
 		case 2:
-			System.out.println("\n******Bem vinde ao Sistema do Professor*****");
-			prof1.imprimirProf();			
-			break;
+			System.out.println("\n***Bem vinde ao Sistema do Professor**");
+			System.out.println("\n1- Bater ponto");
+			System.out.println("\n2- Contar faltas");	
+			System.out.println("\n3- Imprimir informações do Professor");	
+			
+			System.out.println("\nDigite a opção que deseja acessar: ");
+			teacher= leia.nextInt();
+			switch(teacher) {
+			case 1:
+				prof1.batePonto();				
+				break;
+			case 2:
+				prof1.lerFalta();				
+				break;
+			case 3:
+				prof1.imprimirProf();				
+				break;			
+				default:
+					System.out.println("\nOpção inválida, tente novamente!");					
+				}break;		
+							
 			
 		case 3:
-			System.out.println("\n*******Bem vinde ao Sistema do Staff******");
+			System.out.println("\n****Bem vinde ao Sistema do Staff***");
 			limpeza.imprimirStaff();
 			limpeza.sorteioDia();
-			break;			
+			break;
+		
+		case 0:
+			System.out.println("\nSaindo do sistema, volte sempre!");
+			break;
 			default:
-				System.out.println("\nOpção inválida, digite as opções do Menu");
+				System.out.println("\nOpção inválida, tente novamente!");
 				
 		}
 				
@@ -80,3 +102,4 @@ public class EscolaTeste {
 	}						
 
 }
+

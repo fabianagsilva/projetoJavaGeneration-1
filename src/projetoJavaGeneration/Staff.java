@@ -13,8 +13,11 @@ public class Staff extends Escola {
     }
 
     public void sorteioDia() {
-    	int a = (int)(Math.random()*5.0);        
-        System.out.println("\nO número escolhido foi: "+a+ " logo, o local a ser limpado é: ");
+    	
+    	int a = (int)(Math.random()*5.0);     
+    	System.out.println("\n\t\tSorteando número....");
+    	System.out.println("-----------------------------------------------------------------------------------");
+        System.out.println("\nO número escolhido foi: "+a+ ". Hoje você ficará responsável pela limpeza da(o): ");       
                 
         switch(a) {
         case 1:
@@ -53,7 +56,7 @@ public class Staff extends Escola {
     }    
     
     public void imprimirStaff() {
-        System.out.println("\n****************Staff****************");
+        System.out.println("\n*******Staff*****");
         System.out.println("\nNome: "+getNome()+"\nGênero: "+getGenero()+"\nEndereço: "+getEndereco()+"\nCPF: "+getCpf()+"\nIdade: "
                 +getIdade()+"\nTelefone: "+getTelefone()+"\nArea: "+getArea()+"\nTurno: "+turno);    
             

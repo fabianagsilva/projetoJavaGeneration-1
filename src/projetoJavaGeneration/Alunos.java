@@ -8,14 +8,18 @@ public class Alunos extends Escola {
 
 	int totalFaltas;
 	float mediaFinal;
+	
+	//Atributos da Subclasse Alunos
 	private int id;
 	private int serie;
 	private String turma;
 
 	public Alunos(String nome, String genero, String endereco, String cpf, int idade, int telefone, int id, int serie,
 			String turma) {
+		
+		//Super referencia a superclasse
 		super(nome, genero, endereco, cpf, idade, telefone);
-
+		
 		this.id = id;
 		this.serie = serie;
 		this.turma = turma;
@@ -87,7 +91,7 @@ public class Alunos extends Escola {
 
 	public void faltasAluno(){
 	if(totalFaltas >=0 && totalFaltas <=32){
-		System.out.println("\nAluna(o) com faltas dentro do limite anual!");
+		System.out.println("\nAluna(o) dentro do limite de faltas permitido pela instituição!");
 	}else {
 		System.out.println("\nAluna(o) REPROVADA(O) por faltas!");
 		}
